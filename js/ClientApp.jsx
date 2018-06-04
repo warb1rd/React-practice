@@ -1,21 +1,20 @@
 import React from "react";
 import { render } from "react-dom";
  
-const ce = React.createElement;
+const CE = React.createElement;
 
 const MyTitle = function(props) {
-  return ce("div", null, ce("h1", { style: { color: props.color } }, props.title));
+  return CE("div", null, CE("h1", { style: { color: props.color } }, props.title));
 };
 
 const Component = function() {
-  return ce("div",{ id: "Component" },
-    ce(MyTitle, { title: "Star Trek", color: "YellowGreen" }),
-    ce(MyTitle, { title: "Stranger Things", color: "GreenYellow" }),
-    ce(MyTitle, { title: "Rick and Morty", color: "DodgerBlue" }),
-    ce(MyTitle, { title: "Firefly", color: "Peru" })
+  return CE("div",{ id: "Component" },
+    CE(MyTitle, { title: "Star Trek", color: "YellowGreen" }),
+    CE(MyTitle, { title: "Stranger Things", color: "GreenYellow" }),
+    CE(MyTitle, { title: "Rick and Morty", color: "DodgerBlue" }),
+    CE(MyTitle, { title: "Firefly", color: "Peru" })
   );
 };
-
-render(ce(Component), document.getElementById("app"));
+render(CE(Component), document.getElementById("app"));
 
 //jsx transpiles to createElement calls.
