@@ -7,33 +7,11 @@
     <title>VideoApp</title>
 </head>
 <body>
-    <div id="app"></div>
-    <script src="node_modules/react/dist/react.js"></script>
-    <script src="node_modules/react-dom/dist/react-dom.js"></script>
-    <script>
-        const CE = React.createElement
-        const MyTitle = function(props){
-            return (
-                CE("div", null,          
-                CE("h1", {style: {color: props.color}}, props.title)
-                )
-            )
-
-        }
-        const Component = function() {
-            return CE("div", {id:"Component"},           
-                CE(MyTitle, {title: "Star Trek", color: "YellowGreen"}),
-                CE(MyTitle, {title: "Stranger Things", color: "GreenYellow" }),
-                CE(MyTitle, {title: "Rick and Morty", color: "DodgerBlue" }),
-                CE(MyTitle, {title: "Firefly", color: "Peru" })                
-            )
-        }
-        ReactDOM.render(
-            CE(Component),
-            document.getElementById("app")
-        )
-        
-        //jsx transpiles to createElement calls. 
-    </script>
+	<div id="app"></div>
+	<script src="node_modules/react/dist/react.js"></script>
+	<script src="node_modules/react-dom/dist/react-dom.js"></script>
+	<script>
+    
+	</script>
 </body>
 </html>
