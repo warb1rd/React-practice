@@ -8,6 +8,10 @@
 			path: path.join(__dirname, "public"),
 			filename: "bundle.js"
 		},
+		devServer: {
+			publicPath: "/public/",
+			historyApiFallback: true
+		},
 		resolve: {
 			extensions: [".js", ".jsx", ".json"]
 		},
@@ -18,6 +22,12 @@
 		},
 		module: {
 			rules: [
+				{
+					enforce: "pre",										//Runs before babel runs
+					test: /\.jsx?$/,
+					loader: "eslint-loader",
+					exclude: /node_modules/
+				},
 				{
 					test: /\.jsx?$/,									//Extension for the file must be js and x maybe there and $ = end of the filename
 					loader: "babel-loader"

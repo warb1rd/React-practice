@@ -1,18 +1,21 @@
 import React from "react";
 import { render } from "react-dom";
- 
-const App = () => {                                //Arrow function has implicit return function
-  return (
-    <div className="app">
-      <div className="landing">
-        <h1>Moving Pictures</h1>
-        <input type="text" placeholder="Search" />
-        <a> Browse All</a>
+import { BrowserRouter, Route } from "react-router-dom";
+import Landing from "./Landing";
+import Search from "./Search";
+
+const App = () =>(
+    <BrowserRouter>                                    
+      <div className="app">
+      <Route exact path="/" component={Landing} />
+      <Route exact path="/search" component={Search} />
+      
       </div>
-    </div>
+    </BrowserRouter>
   );
-};
 
 render(<App />, document.getElementById("app"));
 
-//jsx transpiles to createElement calls.
+// jsx transpiles to createElement calls.
+// Arrow function has implicit return function in a one liner
+// Higher order component - encapsulate behavior but not styling or markup
