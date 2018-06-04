@@ -15,17 +15,17 @@
         const MyTitle = function(props){
             return (
                 CE("div", null,          
-                CE("h1", null, props.title)
+                CE("h1", {style: {color: props.color}}, props.title)
                 )
             )
 
         }
         const Component = function() {
             return CE("div", {id:"Component"},           
-                CE(MyTitle, {title: "Star Trek"}),
-                CE(MyTitle, {title: "Stranger Things"}),
-                CE(MyTitle, {title: "Rick and Morty"}),
-                CE(MyTitle, {title: "Firefly"})                
+                CE(MyTitle, {title: "Star Trek", color: "YellowGreen"}),
+                CE(MyTitle, {title: "Stranger Things", color: "GreenYellow" }),
+                CE(MyTitle, {title: "Rick and Morty", color: "DodgerBlue" }),
+                CE(MyTitle, {title: "Firefly", color: "Peru" })                
             )
         }
         ReactDOM.render(
