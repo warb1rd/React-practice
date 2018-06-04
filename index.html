@@ -11,29 +11,30 @@
     <script src="node_modules/react/dist/react.js"></script>
     <script src="node_modules/react-dom/dist/react-dom.js"></script>
     <script>
+        const CE = React.createElement
         const MyTitle = function(){
             return (
-                React.createElement("div", null,          
-                React.createElement("h1", null, "Second component")
+                CE("div", null,          
+                CE("h1", null, "Second component")
                 )
             )
 
         }
         const Component = function() {
-            return React.createElement("div", {id:"Component"},           
-                [React.createElement(MyTitle),
-                React.createElement(MyTitle),
-                React.createElement(MyTitle),
-                React.createElement(MyTitle)]
+            return CE("div", {id:"Component"},           
+                CE(MyTitle, {title: "Star Trek"}),
+                CE(MyTitle, {title: "Stranger Things"}),
+                CE(MyTitle, {title: "Rick and Morty"}),
+                CE(MyTitle, {title: "Firefly"})
                 
             )
         }
-
         ReactDOM.render(
-            React.createElement(Component),
+            CE(Component),
             document.getElementById("app")
         )
         
+        //jsx transpiles to createElement calls. 
     </script>
 </body>
 </html>
