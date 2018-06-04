@@ -1,20 +1,18 @@
 import React from "react";
 import { render } from "react-dom";
  
-const CE = React.createElement;
-
-const MyTitle = function(props) {
-  return CE("div", null, CE("h1", { style: { color: props.color } }, props.title));
-};
-
-const Component = function() {
-  return CE("div",{ id: "Component" },
-    CE(MyTitle, { title: "Star Trek", color: "YellowGreen" }),
-    CE(MyTitle, { title: "Stranger Things", color: "GreenYellow" }),
-    CE(MyTitle, { title: "Rick and Morty", color: "DodgerBlue" }),
-    CE(MyTitle, { title: "Firefly", color: "Peru" })
+const App = () => {                                //Arrow function has implicit return function
+  return (
+    <div className="app">
+      <div className="landing">
+        <h1>Moving Pictures</h1>
+        <input type="text" placeholder="Search" />
+        <a> Browse All</a>
+      </div>
+    </div>
   );
 };
-render(CE(Component), document.getElementById("app"));
+
+render(<App />, document.getElementById("app"));
 
 //jsx transpiles to createElement calls.
