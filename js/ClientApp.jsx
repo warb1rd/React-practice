@@ -12,7 +12,3 @@ if(module.hot) {
     renderApp();
   })
 }
-
-// jsx transpiles to createElement calls.
-// Arrow function has implicit return function in a one liner
-// Higher order component - encapsulate behavior but not styling or markup

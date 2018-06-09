@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import preload from "../data.json";
 import ShowCard from "./ShowCard";
@@ -18,7 +19,7 @@ class Search extends Component{
 		return(
 	<div className="search">
 		<header>
-			<h1>Moving Pictures</h1>
+			<h1>Moving Pictures </h1>
 			<input 
 				onChange={this.handleSearchTermChange} 																			
 				value={this.state.searchTerm} 
@@ -38,4 +39,3 @@ class Search extends Component{
 
 export default Search;
 
-// Creates a new function everytime it renders-.bind

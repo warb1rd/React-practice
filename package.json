@@ -1,7 +1,7 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
-    "build": "webpack",
+    "build": "Webpack js/ClientApp.jsx public/bundle.js",
     "dev": "webpack-dev-server",
     "lint": "eslint **/*.{js, jsx} --quiet",
     "test": "jest",

@@ -2,14 +2,14 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-	context: __dirname,                  							//Running webpack frmo anywhere in the project  and it will run from the root directory from
+	context: __dirname,                  							
 	entry: [
 		"react-hot-loader/patch",
-		"webpack-dev-server/client?http://localhost:8082",
+		"webpack-dev-server/client?http://localhost:8080",
 		"webpack/hot/only-dev-server",
 		"./js/ClientApp.jsx"
 	],
-	devtool: "cheap-eval-source-map",    							//sources the errors to the pretranspiled code
+	devtool: "cheap-eval-source-map",    							
 	output: {
 		path: path.join(__dirname, "public"),
 		filename: "bundle.js",
@@ -35,13 +35,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				enforce: "pre",										//Runs before babel runs
+				enforce: "pre",										
 				test: /\.jsx?$/,
 				loader: "eslint-loader",
 				exclude: /node_modules/
 			},
 			{
-				test: /\.jsx?$/,									//Extension for the file must be js and x maybe there and $ = end of the filename
+				test: /\.jsx?$/,									
 				loader: "babel-loader"
 			}
 		]

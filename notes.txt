@@ -1,0 +1,15 @@
+
+webpack.config
+Running webpack frmo anywhere in the project  and it will run from the root directory from (5)
+sources the errors to the pretranspiled code(12)
+Runs before babel runs (38)
+Extension for the file must be js and x maybe there and $ = end of the filename (44)
+
+
+CLIENTAPP
+jsx transpiles to createElement calls.
+Arrow function has implicit return function in a one liner
+Higher order component - encapsulate behavior but not styling or markup
+
+Search
+// Creates a new function everytime it renders-.bind
